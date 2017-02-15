@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 })
 export class LastArticlesComponent implements OnInit {
 
-  constructor(private LastArticlesService : LastArticlesService, private router: Router) { }
+  constructor(private LastArticlesService : LastArticlesService) { }
   articles = [];
   private slug = new Slug('default');
 
@@ -27,8 +27,8 @@ export class LastArticlesComponent implements OnInit {
     this.loadArticles();
   }
 
-  goToArticle(article){
-    this.router.navigate(['/article', article.id, article.url]);
-  }
+  // goToArticle(article){
+  //   this.router.navigate(['/article', article.id, article.url]);
+  // }
 
 }

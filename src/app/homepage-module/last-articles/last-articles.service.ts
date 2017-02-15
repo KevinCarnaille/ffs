@@ -6,8 +6,8 @@ import 'rxjs/add/operator/map';
 export class LastArticlesService{
     constructor(private http: Http){}
 
-    getLastArticles() {
-        return this.http.get('app/homepage-module/last-articles/last.json').map(
+    getLastArticles(id? : number) { // Optionnal param
+        return this.http.get('./last.json').map(
             (res: Response) => res.json()
         );
     }

@@ -1,10 +1,12 @@
 <p>
-  last-articles works!
+    last-articles works!
 </p>
 
 <div class="row">
-  <div *ngFor="let article of articles" class="col-sm-12" (click)="goToArticle(article)">
-      {{article.name}}<br/>
-      <small> {{article.description}}</small>
-  </div>
+    <div *ngFor="let article of articles" class="col-sm-12">
+        <a href="" [routerLink]="['/article', article.id, article.url]">
+            {{article.name}}<br/>
+            <small> {{article.description}}</small>
+        </a>
+    </div>
 </div>

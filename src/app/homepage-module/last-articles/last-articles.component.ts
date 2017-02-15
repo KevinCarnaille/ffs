@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { LastArticlesService } from './last-articles.service';
-import {Router} from '@angular/router';
+import {IArticle} from "../../article-module/article/article.interface";
 import { Slug } from 'ng2-slugify';
 import 'rxjs/add/operator/map';
+import {Router, ActivatedRoute} from '@angular/router';
+import {ArticleComponent} from "../../article-module/article/article.component";
+
 
 @Component({
   selector: 'last-articles',
@@ -10,11 +13,12 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./last-articles.component.sass'],
   providers: [LastArticlesService]
 })
-export class LastArticlesComponent implements OnInit {
+export class LastArticlesComponent implements OnInit{
 
-  constructor(private LastArticlesService : LastArticlesService) { }
-  articles = [];
+  articles: Array<IArticle>;
   private slug = new Slug('default');
+
+  constructor(private LastArticlesService : LastArticlesService, private route: ActivatedRoute, private router: Router) {}
 
   public loadArticles(): void {
     this.LastArticlesService.getLastArticles().subscribe(data => {
@@ -26,9 +30,5 @@ export class LastArticlesComponent implements OnInit {
   ngOnInit() {
     this.loadArticles();
   }
-
-  // goToArticle(article){
-  //   this.router.navigate(['/article', article.id, article.url]);
-  // }
 
 }

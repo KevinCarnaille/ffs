@@ -1,12 +1,18 @@
 <p>
-    last-articles works!
+    Last articles
 </p>
 
 <div class="row">
     <div *ngFor="let article of articles" class="col-sm-12">
-        <a href="" [routerLink]="['/article', article.id, article.url]">
+        <a href="" [routerLink]="['/article', article.id, article.url]" routerLinkActive="active">
             {{article.name}}<br/>
             <small> {{article.description}}</small>
         </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <a href="" routerLink="/articles" routerLinkActive="active" class="btn btn-outline-primary">Voir tous les articles</a>
     </div>
 </div>

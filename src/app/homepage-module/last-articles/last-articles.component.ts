@@ -4,7 +4,6 @@ import {IArticle} from "../../article-module/article/article.interface";
 import { Slug } from 'ng2-slugify';
 import 'rxjs/add/operator/map';
 import {Router, ActivatedRoute} from '@angular/router';
-import {ArticleComponent} from "../../article-module/article/article.component";
 
 
 @Component({

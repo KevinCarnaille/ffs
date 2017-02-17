@@ -6,7 +6,7 @@ import {LastArticlesService} from "../../homepage-module/last-articles/last-arti
     selector: 'article-ffs',
     templateUrl: './article.component.html',
     styleUrls: ['./article.component.sass'],
-    providers: [LastArticlesService]
+    providers: [LastArticlesService],
 })
 export class ArticleComponent implements OnInit {
     public articleId: number;

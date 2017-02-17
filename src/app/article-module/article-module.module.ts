@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ArticleComponent } from './article/article.component';
 import {HomepageModuleModule} from "../homepage-module/homepage-module.module";
 import { PreviousArticleComponent } from './previous-article/previous-article.component';
+import {NextArticleComponent} from "./next-article/next-article.component";
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { PreviousArticleComponent } from './previous-article/previous-article.co
     HomepageModuleModule
   ],
   exports: [ArticleComponent, PreviousArticleComponent],
-  declarations: [ArticleComponent, PreviousArticleComponent]
+  declarations: [ArticleComponent, PreviousArticleComponent, NextArticleComponent]
 })
 export class ArticleModuleModule { }

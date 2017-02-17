@@ -1,0 +1,4 @@
+<div>
+    <a *ngIf="nextArticle" [hidden]="!isNotLast" href="" title="{{nextArticle.name}}" class="btn btn-sm btn-primary"
+       [routerLink]="['/article', nextArticle.id, nextArticle.slug_name]">Suivant ></a>
+</div>

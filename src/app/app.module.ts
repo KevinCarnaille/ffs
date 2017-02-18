@@ -11,6 +11,7 @@ import {ArticleModuleModule} from "./article-module/article-module.module";
 
 import {ROUTES} from './app.routes';
 import { AppComponent } from './app.component';
+import {ContactModuleModule} from "./contact-module/contact-module.module";
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { AppComponent } from './app.component';
     IncludesModuleModule,
     AllArticlesModuleModule,
     ArticleModuleModule,
+    ContactModuleModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],

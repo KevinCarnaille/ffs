@@ -11,6 +11,7 @@ import {LastArticlesService} from "../../homepage-module/last-articles/last-arti
 export class ArticleComponent implements OnInit {
     public articleId: number;
     public article: {};
+    public comments : Object[] = [];
 
     constructor(private route: ActivatedRoute, private service: LastArticlesService) {
     }

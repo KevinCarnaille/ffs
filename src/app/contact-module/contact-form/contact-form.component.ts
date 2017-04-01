@@ -25,10 +25,10 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
-  formErrors = {
-    'email': 'Veuillez saisir un email valide',
-    'message' : 'Veuillez saisir votre message'
-  };
+  submitContact(){
+    console.log(this.contactForm.value);
+    this.contactForm.reset();
+  }
 
   ngOnInit() {
   }

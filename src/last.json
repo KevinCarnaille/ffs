@@ -5,12 +5,12 @@
     "description": "This is the article one short desc",
     "comments" : [
       {
-        "content" : "This is a comment 1",
-        "author" : "Author name"
+        "message" : "This is a comment 1",
+        "alias" : "Author name"
       },
       {
-        "content" : "This is a comment 1 n°2",
-        "author" : "Author name"
+        "message" : "This is a comment 1 n°2",
+        "alias" : "Author name"
       }
     ]
   },
@@ -20,12 +20,12 @@
     "description": "This is the article two short desc",
     "comments" : [
       {
-        "content" : "This is a comment 2",
-        "author" : "Author name"
+        "message" : "This is a comment 2",
+        "alias" : "Author name"
       },
       {
-        "content" : "This is a comment 2 n°2",
-        "author" : "Author name"
+        "message" : "This is a comment 2 n°2",
+        "alias" : "Author name"
       }
     ]
   },
@@ -35,12 +35,12 @@
     "description": "This is the article three short desc",
     "comments" : [
       {
-        "content" : "This is a comment 3",
-        "author" : "Author name"
+        "message" : "This is a comment 3",
+        "alias" : "Author name"
       },
       {
-        "content" : "This is a comment 3 n°2",
-        "author" : "Author name"
+        "message" : "This is a comment 3 n°2",
+        "alias" : "Author name"
       }
     ]
   }

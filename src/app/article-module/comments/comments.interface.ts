@@ -1,5 +1,6 @@
 export interface CommentInterface{
     id : number,
     message : string,
-    alias   : string
+    alias   : string,
+    answers : any[]
 }

@@ -11,6 +11,8 @@ export class CommentFormComponent implements OnInit {
 
   private commentForm : FormGroup;
   private commentAnswserid : number;
+  @Output() hideForm: EventEmitter<boolean> = new EventEmitter<boolean>();
+
 
   constructor(private _fb : FormBuilder, private _AddCommentService : AddCommentService, private _AnswerCommentService : AnswerCommentService) {
     this.buildCommentForm();
@@ -31,6 +33,8 @@ export class CommentFormComponent implements OnInit {
   submitComment(){
     this._AddCommentService.addComment(this.commentForm.value);
     this.commentForm.reset();
+    this.hideForm.emit(true);
+
   }
 
   getAnswerId(){

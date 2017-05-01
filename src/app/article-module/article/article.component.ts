@@ -12,6 +12,7 @@ import {AddCommentService, AnswerCommentService} from "../comments/comments.serv
 export class ArticleComponent implements OnInit {
 
     public articleId: number;
+    public displayCommentForm:boolean=false;
     public article: {};
     public comments : Object[];
 
@@ -31,6 +32,16 @@ export class ArticleComponent implements OnInit {
                 let article = data.filter((item) => item.id == this.articleId);
                 return this.article = article[0];
             });
+    }
+
+    onAnswer(showForm){
+        this.displayCommentForm = showForm;
+    }
+
+    onSubmitNewComment(hideForm){
+        if(hideForm){
+            this.displayCommentForm = false;
+        }
     }
 
     ngOnInit() {

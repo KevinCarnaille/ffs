@@ -13,11 +13,16 @@
         </div>
         <hr>
         <div class="row">
-            <comments [comments]="article?.comments"></comments>
+            <comments (displayCommentForm)="onAnswer($event)" class="col" [comments]="article?.comments"></comments>
         </div>
         <br>
         <div class="row">
-            <comment-form></comment-form>
+            <div class="col">
+                <button type="button" (click)="displayCommentForm = !displayCommentForm">Laisser un commentaire</button>
+            </div>
+        </div>
+        <div class="row" *ngIf="displayCommentForm">
+            <comment-form (hideForm)="onSubmitNewComment($event)"></comment-form>
         </div>
     </div>
     <div class="col-sm-4">

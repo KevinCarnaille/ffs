@@ -1,13 +1,13 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {LastArticlesService} from "../../homepage-module/last-articles/last-articles.service";
-import {AddCommentService} from "../comments/comments.service";
+import {AddCommentService, AnswerCommentService} from "../comments/comments.service";
 
 @Component({
     selector: 'article-ffs',
     templateUrl: './article.component.html',
     styleUrls: ['./article.component.sass'],
-    providers: [LastArticlesService, AddCommentService],
+    providers: [LastArticlesService, AddCommentService, AnswerCommentService],
 })
 export class ArticleComponent implements OnInit {
 

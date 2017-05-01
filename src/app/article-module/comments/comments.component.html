@@ -1,3 +1,5 @@
-<div class="col-sm-12" *ngFor="let comment of comments">
+<div class="col-sm-12" *ngFor="let comment of comments; let i=index;">
   {{comment.alias}} - {{comment.message}}
+  <div *ngFor="let subcomment of subcomments"></div>
+  <button type="button" (click)="answerToComment(comment)">Répondre</button>
 </div>

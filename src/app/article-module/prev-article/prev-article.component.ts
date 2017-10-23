@@ -29,9 +29,9 @@ export class PrevArticleComponent implements OnInit {
   public loadPrevArticle(param){
     let id = Number(param['id']); // Converts the original string to number
 
-    return this.LastArticlesService.getLastArticles().subscribe((data) => {
+    return this.LastArticlesService.getLastArticles().subscribe((data: any) => {
 
-      let recentArticle: number = Math.min.apply(Math, data.map((o) => o.id)); // Get most recent article ID
+      const recentArticle: number = Math.min.apply(Math, data.map((o) => o.id)); // Get most recent article ID
       if (id > recentArticle){
         this.isFirst = false;
         let prev = data.find((item) => item.id == id - 1);

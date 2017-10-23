@@ -14,10 +14,10 @@ export class ArticlesListComponent implements OnInit {
   articles: Array<IArticle>;
   private slug = new Slug('default');
 
-  constructor(private articlesList : SArticlesList) { }
+  constructor(private articlesList: SArticlesList) { }
 
   private getArticlesList(){
-    this.articlesList.getArticlesList().subscribe( (data) => {
+    this.articlesList.getArticlesList().subscribe( (data: any) => {
       this.articles = data;
       data.forEach((article, i) => article.url = this.slug.slugify(article.name))
     })

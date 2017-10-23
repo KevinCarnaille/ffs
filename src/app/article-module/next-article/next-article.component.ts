@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LastArticlesService } from '../../homepage-module/last-articles/last-articles.service';
-import { IArticle } from '../article/article.interface';
 import {Slug} from 'ng2-slugify';
 import "rxjs/Rx"
 
@@ -31,12 +30,12 @@ export class NextArticleComponent implements OnInit {
   public loadPrevArticle(param){
       let id = Number(param['id']); // Converts the original string to number
 
-      return this.LastArticlesService.getLastArticles().subscribe((data) => {
+      return this.LastArticlesService.getLastArticles().subscribe((data: any) => {
 
-          let olderArticle: number = Math.max.apply(Math, data.map((o) => o.id)); // Get oldest article ID
+          const olderArticle: number = Math.max.apply(Math, data.map((o) => o.id)); // Get oldest article ID
           if (id !== olderArticle){
               this.isNotLast = true;
-              let prev = data.find((item) => item.id == id + 1);
+              const prev = data.find((item) => item.id == id + 1);
               prev.slug_name = this.slug.slugify(prev.name);
               this.nextArticle = prev;
           }else{

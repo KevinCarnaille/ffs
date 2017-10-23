@@ -20,7 +20,7 @@ export class LastArticlesComponent implements OnInit{
   constructor(private LastArticlesService : LastArticlesService, private route: ActivatedRoute, private router: Router) {}
 
   public loadArticles(): void {
-    this.LastArticlesService.getLastArticles().subscribe(data => {
+    this.LastArticlesService.getLastArticles().subscribe((data: any) => {
         this.articles = data;
         data.forEach((article, i) => article.url = this.slug.slugify(article.name))
     });

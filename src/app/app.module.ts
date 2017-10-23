@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomepageModuleModule } from './homepage-module/homepage-module.module';
@@ -21,7 +21,7 @@ import {ContactModuleModule} from "./contact-module/contact-module.module";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     HomepageModuleModule,
     IncludesModuleModule,
     AllArticlesModuleModule,

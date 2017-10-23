@@ -28,8 +28,8 @@ export class ArticleComponent implements OnInit {
 
     loadArticle() {
         this.service.getLastArticles(this.articleId)
-            .subscribe((data) => {
-                let article = data.filter((item) => item.id == this.articleId);
+            .subscribe((data: any) => {
+                const article = data.filter((item) => item.id == this.articleId);
                 return this.article = article[0];
             });
     }

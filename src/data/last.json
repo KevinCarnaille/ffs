@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Article 1",
+    "id": 0,
+    "description": "This is the article one short desc",
+    "comments" : [
+      {
+        "id" : 0,
+        "message" : "This is a comment 1",
+        "alias" : "Author name",
+        "answers" : [
+          {
+            "id" : 0,
+            "message" : "This is an answer",
+            "alias" : "Author name"
+          },
+          {
+            "id" : 1,
+            "message" : "This is another answer",
+            "alias" : "Author name"
+          }
+        ]
+      },
+      {
+        "id" : 1,
+        "message" : "This is a comment 1 n°2",
+        "alias" : "Author name"
+      }
+    ]
+  },
+  {
+    "name": "Article 2",
+    "id": 1,
+    "description": "This is the article two short desc",
+    "comments" : [
+      {
+        "id" : 0,
+        "message" : "This is a comment 2",
+        "alias" : "Author name",
+        "answers" : [
+          {
+            "id" : 0,
+            "message" : "This is an answer",
+            "alias" : "Author name"
+          },
+          {
+            "id" : 1,
+            "message" : "This is another answer",
+            "alias" : "Author name"
+          }
+        ]
+      },
+      {
+        "id" : 1,
+        "message" : "This is a comment 2 n°2",
+        "alias" : "Author name"
+      }
+    ]
+
+  },
+  {
+    "name": "Article 3",
+    "id": 2,
+    "description": "This is the article three short desc",
+    "comments": [
+      {
+        "id": 0,
+        "message": "This is a comment 3",
+        "alias": "Author name",
+        "answers": [
+          {
+            "id": 0,
+            "message": "This is an answer",
+            "alias": "Author name"
+          },
+          {
+            "id": 1,
+            "message": "This is another answer",
+            "alias": "Author name"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "message": "This is a comment 3 n°2",
+        "alias": "Author name",
+        "answers": [
+          {
+            "id": 1,
+            "message": "This is another answer",
+            "alias": "Author name"
+          }
+        ]
+      }
+    ]
+  }
+]

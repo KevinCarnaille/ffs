@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FfsService} from '../../app.services';
 
 @Component({
   selector: 'header-ffs',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-ffs.component.sass']
 })
 export class HeaderFfsComponent implements OnInit {
-
-  constructor() { }
+  globalConst;
+  constructor(private global: FfsService) {
+    this.globalConst = global.ffsGlobal;
+  }
 
   ngOnInit() {
   }

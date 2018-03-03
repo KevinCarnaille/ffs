@@ -1,7 +1,15 @@
-<a routerLink="/" routerLinkActive="active">LOGO</a>
+<div class="row">
+  <div class="col-3">
+    <a routerLink="/" routerLinkActive="active">
+      <img src="{{'logo.png'|imageDir }}" width="75" alt="">
+    </a>
+  </div>
+  <nav class="col-9">
+    <ul class="row list-unstyled justify-content-start">
+      <li class="col"><a href="" routerLink="/articles" routerLinkActive="active">Articles</a></li>
+      <li class="col"><a href="" routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    </ul>
+  </nav>
+</div>
 
-<ul>
-  <li><a href="" routerLink="/articles" routerLinkActive="active">Articles</a></li>
-  <li><a href="" routerLink="/contact" routerLinkActive="active">Contact</a></li>
-</ul>
 

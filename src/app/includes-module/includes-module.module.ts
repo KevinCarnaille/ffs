@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 //
 import { HeaderFfsComponent } from './header-ffs/header-ffs.component';
 import { FooterFfsComponent } from './footer-ffs/footer-ffs.component';
+import {CustomModule} from "../../custom/custom.module";
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    CustomModule
   ],
   exports: [HeaderFfsComponent, FooterFfsComponent],
   declarations: [HeaderFfsComponent, FooterFfsComponent]

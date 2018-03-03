@@ -11,8 +11,8 @@ import {ArticleModuleModule} from './article-module/article-module.module';
 import {ROUTES} from './app.routes';
 import { AppComponent } from './app.component';
 import {ContactModuleModule} from './contact-module/contact-module.module';
-
-
+import { FfsService } from './app.services';
+import {CustomModule} from '../custom/custom.module';
 
 @NgModule({
   declarations: [
@@ -28,10 +28,13 @@ import {ContactModuleModule} from './contact-module/contact-module.module';
     AllArticlesModuleModule,
     ArticleModuleModule,
     ContactModuleModule,
-    RouterModule.forRoot(ROUTES)
+    CustomModule,
+    RouterModule.forRoot(ROUTES),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [FfsService],
+  bootstrap: [AppComponent],
 })
 
-export class AppModule { }
+export class AppModule {
+
+}

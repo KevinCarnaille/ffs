@@ -1,0 +1,4 @@
+<div>
+  <a *ngIf="prevArticle" [hidden]="isFirst" href="" title="{{prevArticle.name}}" class="btn btn-sm btn-primary"
+     [routerLink]="['/article', prevArticle.id, prevArticle.slug_name]">< Précédent</a>
+</div>

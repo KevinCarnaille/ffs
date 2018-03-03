@@ -1,3 +1,32 @@
-<p>
-  article works!
-</p>
+<div class="row">
+    <div class="col-sm-8">
+        <h1>{{article?.name}}</h1>
+        <p>{{article?.description}}</p>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6 text-left">
+                <prev-article></prev-article>
+            </div>
+            <div class="col-sm-6 text-right">
+                <next-article></next-article>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <comments (displayCommentForm)="onAnswer($event)" class="col" [comments]="article?.comments"></comments>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <button type="button" (click)="displayCommentForm = !displayCommentForm">Laisser un commentaire</button>
+            </div>
+        </div>
+        <div class="row" *ngIf="displayCommentForm">
+            <comment-form (hideForm)="onSubmitNewComment($event)"></comment-form>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <last-articles></last-articles>
+    </div>
+</div>
+

@@ -1,0 +1,4 @@
+<div class="col-sm-12" *ngFor="let comment of comments; let i=index;" style="margin-bottom: 15px;">
+  {{comment.alias}} - {{comment.message}}   <button type="button" (click)="answerToComment(comment, i);">Répondre</button>
+  <div style="padding-left: 20px;" *ngFor="let subcomment of comment.answers">{{subcomment.alias}} - {{subcomment.message}}</div>
+</div>

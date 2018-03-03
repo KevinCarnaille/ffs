@@ -7,7 +7,7 @@ import {ContactFormComponent} from "./contact-module/contact-form/contact-form.c
 
 export const ROUTES: Routes = [
     {path: '', component: LastArticlesComponent},
-    {path: 'articles', component: ArticlesListComponent},
-    {path: 'article/:id/:slug', component: ArticleComponent},
-    {path: 'contact', component: ContactFormComponent}
+    {path: 'articles', component: ArticlesListComponent, data : { state : 'articles'}},
+    {path: 'article/:id/:slug', component: ArticleComponent, data : { state : 'article'}},
+    {path: 'contact', component: ContactFormComponent, data : { state : 'contact'}}
 ];
